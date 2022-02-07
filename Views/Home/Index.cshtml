@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Info</h1>
+
+    <h2>Environment Variables</h2>
+    <table>
+        @{
+            foreach (var key in ViewData.Model.Keys)
+            {
+                String val = ViewData.Model[key] != null ? ViewData.Model[key].ToString() : "";
+
+                <tr>
+                    <td class="key">@key</td>
+                    <td>@val</td>
+                </tr>
+            }
+        }
+    </table>
+
+
+    
+</div>
+

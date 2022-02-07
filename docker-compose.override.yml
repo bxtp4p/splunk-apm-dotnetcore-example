@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  splunk-apm-dotnetcore-example:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

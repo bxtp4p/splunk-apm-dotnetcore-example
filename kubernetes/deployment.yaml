@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-mvc-dotnetcore-example
+spec:
+  selector:
+    matchLabels:
+      app: aspnet-mvc-dotnetcore-example
+  template:
+    metadata:
+      labels:
+        app: aspnet-mvc-dotnetcore-example
+    spec:
+      tolerations:
+      nodeSelector:
+      containers:
+        - name: app
+          image: bxtp4p/splunkapmdotnetcoreexample
+          ports:
+          - containerPort: 80
+          env:
+          - name: SIGNALFX_ENV
+            value: dev
+          - name: SIGNALFX_TRACE_DEBUG
+            value: "true"
+          - name: SIGNALFX_STDOUT_LOG_ENABLED
+            value: "true"
+          - name: NODE_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.hostIP
+          - name: SIGNALFX_ENDPOINT_URL 
+            value: "http://$(NODE_IP):9411/api/v2/spans"

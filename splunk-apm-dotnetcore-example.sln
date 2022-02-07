@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "splunk-apm-dotnetcore-example", "splunk-apm-dotnetcore-example.csproj", "{0A4299D9-0DF5-4223-BEB4-9BB17EB8C40A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D7340E51-48C3-4809-8682-081678293AB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A4299D9-0DF5-4223-BEB4-9BB17EB8C40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4299D9-0DF5-4223-BEB4-9BB17EB8C40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4299D9-0DF5-4223-BEB4-9BB17EB8C40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4299D9-0DF5-4223-BEB4-9BB17EB8C40A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7340E51-48C3-4809-8682-081678293AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7340E51-48C3-4809-8682-081678293AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7340E51-48C3-4809-8682-081678293AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7340E51-48C3-4809-8682-081678293AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6896CBC-A40E-4C4A-9061-86C40DD10F51}
+	EndGlobalSection
+EndGlobal
