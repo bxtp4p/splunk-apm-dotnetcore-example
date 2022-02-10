@@ -69,7 +69,6 @@ collector's endpoint:
 
 ```
 SIGNALFX_ENDPOINT_URL=http://<OTEL_COLLECTOR_ADDRESS>:9411/api/v2/spans
-
 ```
 
 
