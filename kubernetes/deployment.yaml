@@ -15,7 +15,8 @@ spec:
       nodeSelector:
       containers:
         - name: app
-          image: bxtp4p/splunkapmdotnetcoreexample
+          image: bxtp4p/splunkapmdotnetcoreexample:2.0
+          imagePullPolicy: Always
           ports:
           - containerPort: 80
           env:
@@ -25,9 +26,23 @@ spec:
             value: "true"
           - name: SIGNALFX_STDOUT_LOG_ENABLED
             value: "true"
+          - name: SIGNALFX_LOGS_INJECTION
+            value: "true"
           - name: NODE_IP
             valueFrom:
               fieldRef:
                 fieldPath: status.hostIP
           - name: SIGNALFX_ENDPOINT_URL 
             value: "http://$(NODE_IP):9411/api/v2/spans"
+          volumeMounts:
+            - name: app-log-dir
+              mountPath: /app/logs/
+        - name: logging-sidecar
+          image: busybox
+          args: [/bin/sh, -c, 'tail -F /var/log/app/app.log']
+          volumeMounts:
+            - name: app-log-dir
+              mountPath: /var/log/app
+      volumes:
+        - name: app-log-dir
+          emptyDir: {}

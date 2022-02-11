@@ -20,12 +20,14 @@ namespace splunk_apm_dotnetcore_example.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Viewed Index Page");
             ViewData.Model = System.Environment.GetEnvironmentVariables();
             return View();
         }
 
         public IActionResult Privacy()
         {
+            _logger.LogInformation("Viewed Privacy Page");
             return View();
         }
 
