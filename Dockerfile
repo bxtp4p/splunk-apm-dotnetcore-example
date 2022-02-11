@@ -17,7 +17,7 @@ RUN dotnet publish "splunk-apm-dotnetcore-example.csproj" -c Release -o /app/pub
 
 FROM base AS final
 
-ARG TRACER_VERSION=0.1.15
+ARG TRACER_VERSION=0.2.1
 ADD https://github.com/signalfx/signalfx-dotnet-tracing/releases/download/v${TRACER_VERSION}/signalfx-dotnet-tracing_${TRACER_VERSION}_amd64.deb /signalfx-package/signalfx-dotnet-tracing.deb
 RUN dpkg -i /signalfx-package/signalfx-dotnet-tracing.deb
 RUN rm -rf /signalfx-package

@@ -26,7 +26,7 @@ spec:
             value: "true"
           - name: SIGNALFX_STDOUT_LOG_ENABLED
             value: "true"
-          - name: SIGNALFX_LOG_INJECTION
+          - name: SIGNALFX_LOGS_INJECTION
             value: "true"
           - name: NODE_IP
             valueFrom:

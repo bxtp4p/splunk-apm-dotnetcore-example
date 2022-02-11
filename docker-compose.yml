@@ -14,4 +14,4 @@ services:
       - SIGNALFX_ENDPOINT_URL=https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace
       - SIGNALFX_TRACE_DEBUG=true
       - SIGNALFX_STDOUT_LOG_ENABLED=true
-      - SIGNALFX_LOG_INJECTION=true
+      - SIGNALFX_LOGS_INJECTION=true
