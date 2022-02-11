@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   splunk-apm-dotnetcore-example:
-    image: ${DOCKER_REGISTRY-}splunkapmdotnetcoreexample:test
+    image: ${DOCKER_REGISTRY-}splunkapmdotnetcoreexample:2.0
     build:
       context: .
       dockerfile: ./Dockerfile

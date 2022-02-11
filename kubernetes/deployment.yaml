@@ -15,7 +15,7 @@ spec:
       nodeSelector:
       containers:
         - name: app
-          image: bxtp4p/splunkapmdotnetcoreexample:test
+          image: bxtp4p/splunkapmdotnetcoreexample:2.0
           imagePullPolicy: Always
           ports:
           - containerPort: 80
